@@ -8,7 +8,7 @@ router.post('/login', (req, res) => {
   const inputIdentifier = (email || username || '').trim().toLowerCase();
   const inputPassword = (password || '').trim();
 
-  const envAdminEmail = (process.env.ADMIN_EMAIL || 'admin@senoraco.in').trim().toLowerCase();
+  const envAdminEmail = (process.env.ADMIN_EMAIL || 'test@gmail.com').trim().toLowerCase();
   const envAdminPassword = (process.env.ADMIN_PASSWORD || 'senora2026').trim();
 
   // Allow login with configured ADMIN_EMAIL or 'admin' or 'umair142005@gmail.com'
