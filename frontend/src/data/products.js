@@ -1,0 +1,1304 @@
+export const CATEGORIES = [
+  {
+    "id": "all",
+    "name": "All Collection",
+    "count": 28,
+    "icon": "Sparkles"
+  },
+  {
+    "id": "top-bottom",
+    "name": "Top & Bottom",
+    "count": 8,
+    "icon": "Layers"
+  },
+  {
+    "id": "abayas",
+    "name": "Abayas",
+    "count": 3,
+    "icon": "ShieldCheck"
+  },
+  {
+    "id": "onepiece",
+    "name": "One-Piece",
+    "count": 7,
+    "icon": "Heart"
+  },
+  {
+    "id": "jeans",
+    "name": "Jeans",
+    "count": 10,
+    "icon": "Sparkles"
+  }
+];
+
+export const INITIAL_PRODUCTS = [
+  {
+    "id": "sen-tb-1",
+    "name": "Aurelia Blue Printed Co-ord Set",
+    "category": "top-bottom",
+    "price": 2899,
+    "originalPrice": 3999,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 20,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 3,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/1/SaveClip.App_797052405_18075465737719284_2560992149797565467_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_797357735_18075465656719284_7848353200835901978_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_813698104_18075465644719284_2064794098021037784_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_813790576_18075465800719284_4818926147450065845_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_814223377_18075465746719284_3796478957805978814_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_814223380_18075465614719284_814104323377549430_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_814223380_18075465728719284_3245929303436380651_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_815335366_18075465647719284_1651029557524370766_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_815468399_18075465791719284_1148718515155190210_n.jpg",
+      "/products/top-bottom/1/SaveClip.App_815468400_18075465680719284_5433885305499978040_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-tb-11",
+    "name": "Blush Rose Contemporary Co-ord",
+    "category": "top-bottom",
+    "price": 3099,
+    "originalPrice": 4299,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 27,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 5,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/11/791043204_18067920503727259_4397485555298947665_n.jpg",
+      "/products/top-bottom/11/791380787_18067920512727259_4865664263820516270_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-tb-2",
+    "name": "Sahara Draped Co-ord & Shawl Set",
+    "category": "top-bottom",
+    "price": 3299,
+    "originalPrice": 4599,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 34,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 7,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/2/SaveClip.App_797357749_18136623286622263_527341758611139052_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_800258793_18136623187622263_3534471161792005162_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_809465052_18136623256622263_4692207915189589411_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_811170122_18136623328622263_3367060953705436162_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_811266663_18136623226622263_527402160735575011_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_812029461_18136623208622263_6253941502262507969_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_812372967_18136623154622263_4554533832245334630_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_812400157_18136623241622263_3744775110437020287_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_812696868_18136623325622263_8362720904260957699_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_812875111_18136623271622263_2986650132051605040_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_812875113_18136623304622263_7022358721810388537_n.jpg",
+      "/products/top-bottom/2/SaveClip.App_813059655_18136623169622263_3150757746055778535_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-tb-3",
+    "name": "Polka Vintage Monochrome Jacket Set",
+    "category": "top-bottom",
+    "price": 2899,
+    "originalPrice": 3999,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 41,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 9,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/3/805027010_18136121308622263_7530972065584143929_n.webp",
+      "/products/top-bottom/3/805027012_18136121188622263_7367743517878289323_n.webp",
+      "/products/top-bottom/3/805752567_18136121338622263_2261579337629938701_n.webp",
+      "/products/top-bottom/3/805783890_18136121260622263_2322330254676328772_n.webp",
+      "/products/top-bottom/3/805783890_18136121422622263_1506907755787755577_n.webp",
+      "/products/top-bottom/3/806141832_18136121290622263_2958586548840831577_n.webp",
+      "/products/top-bottom/3/806223242_18136121431622263_559527462386328681_n.webp",
+      "/products/top-bottom/3/806223246_18136121215622263_3805391353576947550_n.webp",
+      "/products/top-bottom/3/806235925_18136121377622263_7101303521472874404_n.webp",
+      "/products/top-bottom/3/806298894_18136121389622263_4898279256002054644_n.webp",
+      "/products/top-bottom/3/806298903_18136121353622263_343389208594035401_n.webp",
+      "/products/top-bottom/3/806298929_18136121155622263_8845907781085684592_n.webp",
+      "/products/top-bottom/3/806298932_18136121206622263_7182500102443012433_n.webp",
+      "/products/top-bottom/3/806298946_18136121452622263_5082495029278111416_n.webp",
+      "/products/top-bottom/3/806298955_18136121245622263_6392376799632611620_n.webp",
+      "/products/top-bottom/3/806298993_18136121167622263_8816193592994192558_n.webp",
+      "/products/top-bottom/3/806389723_18136121269622263_2315064558526629693_n.webp"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-tb-4",
+    "name": "Mocha Tailored Tunic & Palazzo Set",
+    "category": "top-bottom",
+    "price": 3099,
+    "originalPrice": 4299,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 48,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 11,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/4/805313830_18069201509727259_5193687892448457916_n.jpg",
+      "/products/top-bottom/4/805752424_18069201554727259_8674662429147069402_n.jpg",
+      "/products/top-bottom/4/805876797_18069201542727259_655498311708860723_n.jpg",
+      "/products/top-bottom/4/806223239_18069201527727259_5115721553207520268_n.jpg",
+      "/products/top-bottom/4/806365275_18069201494727259_7644325371674699581_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-tb-5",
+    "name": "Ivory Pleated Relaxed Co-ord",
+    "category": "top-bottom",
+    "price": 3299,
+    "originalPrice": 4599,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 55,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 3,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/5/804646376_18069139760727259_3485481680406942935_n.jpg",
+      "/products/top-bottom/5/805729342_18069139778727259_7279468616654505275_n.jpg",
+      "/products/top-bottom/5/805804053_18069139769727259_6651056245471853548_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-tb-7",
+    "name": "Onyx Textured Classic Two-Piece",
+    "category": "top-bottom",
+    "price": 2899,
+    "originalPrice": 3999,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 62,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 5,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/7/798392785_18068507267727259_9107895071497404496_n.jpg",
+      "/products/top-bottom/7/798414191_18068507285727259_7043183759501653825_n.jpg",
+      "/products/top-bottom/7/798537805_18068507276727259_8527605964352363285_n.jpg",
+      "/products/top-bottom/7/798537818_18068507303727259_8455497174184327073_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-tb-8",
+    "name": "Emerald Satin Notch-Collar Set",
+    "category": "top-bottom",
+    "price": 3099,
+    "originalPrice": 4299,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 69,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 7,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/top-bottom/8/798017701_18068463458727259_6468328715055492648_n.jpg",
+      "/products/top-bottom/8/798063918_18068463473727259_4063770808015945662_n.jpg",
+      "/products/top-bottom/8/798687039_18068463443727259_8055157006136386386_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Top & Bottom drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this top & bottom piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Premium Korean Silk / Cotton Blend",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-ab-10",
+    "name": "Zahra Luxe Pleated Kimono Abaya",
+    "category": "abayas",
+    "price": 3499,
+    "originalPrice": 4899,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 20,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 3,
+    "sizes": [
+      "52",
+      "54",
+      "56",
+      "58"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/Abayas/10/795484571_18068314061727259_8892837293194239339_n.jpg",
+      "/products/Abayas/10/797006379_18068314109727259_5488602192212576093_n.jpg",
+      "/products/Abayas/10/797336325_18068314118727259_5502993752090438004_n.jpg",
+      "/products/Abayas/10/797773597_18068314070727259_3542004213090359254_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Abayas drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this abayas piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "High-Grade Micro Velvet & Pure Nida",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-ab-6",
+    "name": "Layla Royal Embroidered Abaya",
+    "category": "abayas",
+    "price": 3699,
+    "originalPrice": 5199,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 27,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 5,
+    "sizes": [
+      "52",
+      "54",
+      "56",
+      "58"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/Abayas/6/800165808_18107329256622769_8870637643014862685_n.jpg",
+      "/products/Abayas/6/800295731_18107329346622769_4934652491169744017_n.jpg",
+      "/products/Abayas/6/803726471_18107329265622769_3515963045841244230_n.jpg",
+      "/products/Abayas/6/803828134_18107329316622769_3804067681839807632_n.jpg",
+      "/products/Abayas/6/803926589_18107329370622769_7960039100525657775_n.jpg",
+      "/products/Abayas/6/804365535_18107329337622769_8431957885475418907_n.jpg",
+      "/products/Abayas/6/download.png"
+    ],
+    "shortDesc": "Authentic Senora & Co Abayas drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this abayas piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "High-Grade Micro Velvet & Pure Nida",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-ab-9",
+    "name": "Noor Front-Open Minimalist Abaya",
+    "category": "abayas",
+    "price": 3899,
+    "originalPrice": 5499,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 34,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 7,
+    "sizes": [
+      "52",
+      "54",
+      "56",
+      "58"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/Abayas/9/796903088_18068377019727259_1103113840702400030_n.jpg",
+      "/products/Abayas/9/797273347_18068377085727259_1463118291145321162_n.jpg",
+      "/products/Abayas/9/797644426_18068377082727259_945961683042352329_n.jpg",
+      "/products/Abayas/9/797693147_18068377055727259_6385698311779676194_n.jpg",
+      "/products/Abayas/9/797840330_18068377046727259_1300609572730020211_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Abayas drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this abayas piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "High-Grade Micro Velvet & Pure Nida",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-op-1",
+    "name": "Seraphina Pleated Maxi Dress",
+    "category": "onepiece",
+    "price": 3199,
+    "originalPrice": 4499,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 20,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 3,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/onepice/1/729660722_18094774553578472_7927858063859501886_n.jpg",
+      "/products/onepice/1/729739284_18094774571578472_708061139896346352_n.jpg",
+      "/products/onepice/1/729746908_18094774541578472_3289927196847455660_n.jpg",
+      "/products/onepice/1/730040399_18094774562578472_7842646656835316088_n.jpg",
+      "/products/onepice/1/730141586_18094774523578472_898115701657741318_n.jpg",
+      "/products/onepice/1/730199074_18094774496578472_8336300349965074193_n.jpg",
+      "/products/onepice/1/730213039_18094774514578472_3287916657753945730_n.jpg",
+      "/products/onepice/1/730454029_18094774532578472_6789045142431725243_n.jpg",
+      "/products/onepice/1/731602550_18094774511578472_4231087063301152621_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co One-Piece drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this one-piece piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Flowing Georgette & Heavy Satin",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-op-13",
+    "name": "Amira Satin Slip Maxi Gown",
+    "category": "onepiece",
+    "price": 3399,
+    "originalPrice": 4799,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 27,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 5,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/onepice/13/742489649_18195787108374539_4735943263874230157_n.jpg",
+      "/products/onepice/13/750828784_18195787099374539_7560675482500113133_n.jpg",
+      "/products/onepice/13/751320425_18195787126374539_2152218505669776211_n.jpg",
+      "/products/onepice/13/751726737_18195787117374539_6417243725965752769_n.jpg",
+      "/products/onepice/13/752631748_18195787147374539_2495727779768479916_n.jpg",
+      "/products/onepice/13/753541251_18195787138374539_3920902404539889233_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co One-Piece drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this one-piece piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Flowing Georgette & Heavy Satin",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-op-14",
+    "name": "Rosalia Ruffle Sleeve Sundress",
+    "category": "onepiece",
+    "price": 3599,
+    "originalPrice": 5099,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 34,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 7,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/onepice/14/753429483_18061615916727259_8104816957584091987_n.jpg",
+      "/products/onepice/14/753488169_18061615955727259_7013825368189430224_n.jpg",
+      "/products/onepice/14/753648715_18061615964727259_5916218627089932874_n.jpg",
+      "/products/onepice/14/754427920_18061615925727259_3477348384159146094_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co One-Piece drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this one-piece piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Flowing Georgette & Heavy Satin",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-op-2",
+    "name": "Valencia Tiered Satin Midi Dress",
+    "category": "onepiece",
+    "price": 3199,
+    "originalPrice": 4499,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 41,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 9,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/onepice/2/1.jpg",
+      "/products/onepice/2/763332064_18197326570374539_7690155754974255070_n.jpg",
+      "/products/onepice/2/764364204_18197326534374539_4832804950858858714_n.jpg",
+      "/products/onepice/2/764507765_18197326510374539_5770439155103102184_n.jpg",
+      "/products/onepice/2/764661008_18197326501374539_5527657265002397982_n.jpg",
+      "/products/onepice/2/764817421_18197326492374539_4049432822298453199_n.jpg",
+      "/products/onepice/2/764844473_18197326552374539_1559689464973931749_n.jpg",
+      "/products/onepice/2/765059273_18197326543374539_2997332912523435800_n.jpg",
+      "/products/onepice/2/765229529_18197326561374539_7415901087273458860_n.jpg",
+      "/products/onepice/2/765239605_18197326525374539_7343528196949128656_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co One-Piece drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this one-piece piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Flowing Georgette & Heavy Satin",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-op-3",
+    "name": "Celeste Bohemian Flare One-Piece",
+    "category": "onepiece",
+    "price": 3000,
+    "originalPrice": 4199,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 48,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 11,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/onepice/3/707420993_18053538956727259_4189323098436219176_n.jpg",
+      "/products/onepice/3/707421000_18053538947727259_3109935873207523592_n.jpg",
+      "/products/onepice/3/708068049_18053538965727259_9043486336875382894_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co One-Piece drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this one-piece piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Flowing Georgette & Heavy Satin",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-op-4",
+    "name": "Elysian Floral Tiered Gown",
+    "category": "onepiece",
+    "price": 3599,
+    "originalPrice": 5099,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 55,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 3,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/onepice/4/570908097_18028740260727259_5227456598254459466_n.jpg",
+      "/products/onepice/4/572128019_18028740269727259_7332715616467118105_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co One-Piece drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this one-piece piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Flowing Georgette & Heavy Satin",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-op-5",
+    "name": "Aria Sunburst Pleated Dress",
+    "category": "onepiece",
+    "price": 3199,
+    "originalPrice": 4499,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 62,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 5,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/onepice/5/586717259_18300933049260713_6643262323542961886_n.jpg",
+      "/products/onepice/5/588013622_18300933076260713_4573079837736702687_n.jpg",
+      "/products/onepice/5/588702911_18300933073260713_4447846796579885221_n.jpg",
+      "/products/onepice/5/590425366_18300933070260713_1357511645543023769_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co One-Piece drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this one-piece piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "Flowing Georgette & Heavy Satin",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-1",
+    "name": "High-Rise Wide Leg Vintage Denim",
+    "category": "jeans",
+    "price": 2299,
+    "originalPrice": 3199,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 20,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 3,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/1/768931860_18064452122727259_3002315743992306731_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-jn-10",
+    "name": "Deep Indigo Clean Cut Everyday Denim",
+    "category": "jeans",
+    "price": 2499,
+    "originalPrice": 3499,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 27,
+    "isBestSeller": true,
+    "isNew": false,
+    "stock": 5,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/10/762796609_18063406535727259_784398667410867552_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "Bestseller Drop"
+  },
+  {
+    "id": "sen-jn-2",
+    "name": "Straight Cut Raw Hem Relaxed Jeans",
+    "category": "jeans",
+    "price": 2699,
+    "originalPrice": 3799,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 34,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 7,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/2/771808321_18064451987727259_3101607156850353255_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-3",
+    "name": "Classic Midnight Washed Denim",
+    "category": "jeans",
+    "price": 2299,
+    "originalPrice": 3199,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 41,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 9,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/3/771677486_18064451927727259_5977199349961844932_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-4",
+    "name": "Slit Hem Flared Bootcut Jeans",
+    "category": "jeans",
+    "price": 2499,
+    "originalPrice": 3499,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 48,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 11,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/4/769552768_18064298504727259_6147003398289544169_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-5",
+    "name": "Retro Baggy Boyfriend Denim",
+    "category": "jeans",
+    "price": 2699,
+    "originalPrice": 3799,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 55,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 3,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/5/770728481_18064298423727259_6537947220891067151_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-6",
+    "name": "Sculpting Slim Fit Ankle Jeans",
+    "category": "jeans",
+    "price": 2299,
+    "originalPrice": 3199,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 62,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 5,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/6/764558753_17975380944076306_3558671834786669047_n.jpg",
+      "/products/jeans/6/764800376_17975380953076306_8383982200464150972_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-7",
+    "name": "Light Indigo Distressed Streetwear Denim",
+    "category": "jeans",
+    "price": 2499,
+    "originalPrice": 3499,
+    "discount": 28,
+    "rating": 4.8999999999999995,
+    "reviewsCount": 69,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 7,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/7/765175898_18063563981727259_8002453155566651541_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-8",
+    "name": "Charcoal Acid-Washed Relaxed Jeans",
+    "category": "jeans",
+    "price": 2699,
+    "originalPrice": 3799,
+    "discount": 28,
+    "rating": 5,
+    "reviewsCount": 76,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 9,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/8/762866885_18063444443727259_5916248254230545561_n.jpg",
+      "/products/jeans/8/762943925_18063444428727259_5583533354724375587_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  },
+  {
+    "id": "sen-jn-9",
+    "name": "Ecru Ivory High-Waist Wide Jeans",
+    "category": "jeans",
+    "price": 2299,
+    "originalPrice": 3199,
+    "discount": 28,
+    "rating": 4.8,
+    "reviewsCount": 83,
+    "isBestSeller": false,
+    "isNew": true,
+    "stock": 11,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "colors": [
+      {
+        "name": "Signature",
+        "hex": "#8E704F"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#141416"
+      }
+    ],
+    "images": [
+      "/products/jeans/9/764844653_18063443696727259_8616993545923157079_n.jpg"
+    ],
+    "shortDesc": "Authentic Senora & Co Jeans & Denim drop featuring premium finishes and tailored silhouette.",
+    "description": "Designed for the modern muse, this jeans & denim piece combines luxurious drape with versatile styling. Handcrafted with precision for unmatched elegance and comfort.",
+    "fabric": "100% Premium Stretch Denim with Comfort Fit",
+    "care": "Dry clean recommended or gentle hand wash.",
+    "delivery": "Ships in 24-48 Hours | Free Delivery Across India",
+    "tag": "New Drop"
+  }
+];
+
+export const INSTAGRAM_POSTS = [
+  {
+    "id": "ig-1",
+    "handle": "@senora__co",
+    "caption": "Trending: Aurelia Blue Printed Co-ord Set ✨ Available online & WhatsApp ordering.",
+    "image": "/products/top-bottom/1/SaveClip.App_797052405_18075465737719284_2560992149797565467_n.jpg",
+    "likes": "1.2k",
+    "comments": "45",
+    "productId": "sen-tb-1",
+    "productName": "Aurelia Blue Printed Co-ord Set",
+    "price": "₹2,899"
+  },
+  {
+    "id": "ig-2",
+    "handle": "@senora__co",
+    "caption": "Trending: Blush Rose Contemporary Co-ord ✨ Available online & WhatsApp ordering.",
+    "image": "/products/top-bottom/11/791043204_18067920503727259_4397485555298947665_n.jpg",
+    "likes": "1.9k",
+    "comments": "75",
+    "productId": "sen-tb-11",
+    "productName": "Blush Rose Contemporary Co-ord",
+    "price": "₹3,099"
+  },
+  {
+    "id": "ig-3",
+    "handle": "@senora__co",
+    "caption": "Trending: Sahara Draped Co-ord & Shawl Set ✨ Available online & WhatsApp ordering.",
+    "image": "/products/top-bottom/2/SaveClip.App_797357749_18136623286622263_527341758611139052_n.jpg",
+    "likes": "2.6k",
+    "comments": "105",
+    "productId": "sen-tb-2",
+    "productName": "Sahara Draped Co-ord & Shawl Set",
+    "price": "₹3,299"
+  },
+  {
+    "id": "ig-4",
+    "handle": "@senora__co",
+    "caption": "Trending: Polka Vintage Monochrome Jacket Set ✨ Available online & WhatsApp ordering.",
+    "image": "/products/top-bottom/3/805027010_18136121308622263_7530972065584143929_n.webp",
+    "likes": "3.3k",
+    "comments": "135",
+    "productId": "sen-tb-3",
+    "productName": "Polka Vintage Monochrome Jacket Set",
+    "price": "₹2,899"
+  }
+];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: 'Aysha Rahiman',
+    location: 'Calicut, Kerala',
+    text: 'Ordered the Aurelia Co-ord via WhatsApp and received it in 2 days. The satin quality is exceptional, looks way more luxurious than even high-end designer stores!',
+    rating: 5,
+    verified: true,
+    outfit: 'Aurelia Blue Printed Co-ord'
+  },
+  {
+    id: 2,
+    name: 'Fatima Zohra',
+    location: 'Dubai / Kochi',
+    text: 'The Layla Abaya and Sahara Leopard drape is a showstopper. The stitching and material quality is so refined and elegant. Senora & Co is now my go-to boutique.',
+    rating: 5,
+    verified: true,
+    outfit: 'Sahara Draped Set'
+  },
+  {
+    id: 3,
+    name: 'Sneha Menon',
+    location: 'Bangalore',
+    text: 'Loved the smooth checkout experience and direct WhatsApp order confirmation! Perfect fit according to the size chart provided.',
+    rating: 5,
+    verified: true,
+    outfit: 'Seraphina Pleated Maxi'
+  }
+];
+
+export const SIZE_CHART = [
+  { size: 'XS', bust: '32-33"', waist: '25-26"', hip: '35-36"', length: '46"' },
+  { size: 'S', bust: '34-35"', waist: '27-28"', hip: '37-38"', length: '47"' },
+  { size: 'M', bust: '36-37"', waist: '29-30"', hip: '39-40"', length: '48"' },
+  { size: 'L', bust: '38-40"', waist: '31-33"', hip: '41-43"', length: '49"' },
+  { size: 'XL', bust: '41-43"', waist: '34-36"', hip: '44-46"', length: '50"' },
+  { size: 'XXL', bust: '44-46"', waist: '37-39"', hip: '47-49"', length: '50"' }
+];
