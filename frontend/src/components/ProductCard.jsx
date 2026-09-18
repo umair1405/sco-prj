@@ -86,28 +86,28 @@ export default function ProductCard({ product }) {
       </div>
 
       {/* Product Content Details */}
-      <div className="p-4 flex flex-col flex-grow justify-between space-y-3">
+      <div className="p-3 sm:p-4 flex flex-col flex-grow justify-between space-y-2.5 sm:space-y-3">
         
         <div>
           {/* Rating & Fabric brief */}
-          <div className="flex items-center justify-between text-xs text-[#8E704F] mb-1">
-            <span className="font-semibold uppercase tracking-wider text-[10px] text-gray-500">
+          <div className="flex items-center justify-between text-[11px] sm:text-xs text-[#8E704F] mb-1">
+            <span className="font-semibold uppercase tracking-wider text-[9px] sm:text-[10px] text-gray-500">
               {product.category}
             </span>
             <div className="flex items-center gap-1 font-semibold text-[#1F1914]">
-              <Star className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37]" />
+              <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#D4AF37] text-[#D4AF37]" />
               <span>{product.rating}</span>
               <span className="text-gray-400 font-normal">({product.reviewsCount})</span>
             </div>
           </div>
 
           {/* Title */}
-          <h3 className="font-serif-luxury font-bold text-base text-[#1F1914] group-hover:text-[#8E704F] transition-colors line-clamp-1">
+          <h3 className="font-serif-luxury font-bold text-sm sm:text-base text-[#1F1914] group-hover:text-[#8E704F] transition-colors line-clamp-1">
             {product.name}
           </h3>
 
           {/* Short description */}
-          <p className="text-xs text-[#6B5E55] line-clamp-1 mt-0.5">
+          <p className="text-[11px] sm:text-xs text-[#6B5E55] line-clamp-1 mt-0.5">
             {product.shortDesc}
           </p>
         </div>
@@ -115,17 +115,17 @@ export default function ProductCard({ product }) {
         {/* Sizes & Colors Preview */}
         <div className="pt-1 border-t border-gray-100 flex items-center justify-between">
           {/* Available Sizes preview */}
-          <div className="flex items-center gap-1">
-            {product.sizes.slice(0, 4).map((s) => (
+          <div className="flex items-center gap-1 flex-wrap">
+            {product.sizes.slice(0, 3).map((s) => (
               <span 
                 key={s} 
-                className="text-[10px] font-semibold text-[#5A483B] bg-[#F4EDE2] px-1.5 py-0.5 rounded"
+                className="text-[9px] sm:text-[10px] font-semibold text-[#5A483B] bg-[#F4EDE2] px-1.5 py-0.5 rounded"
               >
                 {s}
               </span>
             ))}
-            {product.sizes.length > 4 && (
-              <span className="text-[10px] text-gray-400 font-medium">+{product.sizes.length - 4}</span>
+            {product.sizes.length > 3 && (
+              <span className="text-[9px] sm:text-[10px] text-gray-400 font-medium">+{product.sizes.length - 3}</span>
             )}
           </div>
 
@@ -134,7 +134,7 @@ export default function ProductCard({ product }) {
             {product.colors.map((c, i) => (
               <span 
                 key={i} 
-                className="w-3.5 h-3.5 rounded-full border-2 border-white shadow-xs"
+                className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full border-2 border-white shadow-xs"
                 style={{ backgroundColor: c.hex }}
                 title={c.name}
               />
@@ -145,19 +145,19 @@ export default function ProductCard({ product }) {
         {/* Price & Mobile Actions */}
         <div className="pt-2 border-t border-[#EADBCE] flex items-center justify-between">
           <div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-base font-bold text-[#1F1914]">
+            <div className="flex items-baseline gap-1.5 sm:gap-2">
+              <span className="text-sm sm:text-base font-bold text-[#1F1914]">
                 {formatPrice(product.price)}
               </span>
               {product.originalPrice > product.price && (
-                <span className="text-xs text-gray-400 line-through">
+                <span className="text-[10px] sm:text-xs text-gray-400 line-through">
                   {formatPrice(product.originalPrice)}
                 </span>
               )}
             </div>
             {product.stock <= 4 && (
-              <span className="text-[10px] font-bold text-[#D95353] block">
-                Only {product.stock} left in stock
+              <span className="text-[9px] sm:text-[10px] font-bold text-[#D95353] block">
+                Only {product.stock} left
               </span>
             )}
           </div>
@@ -166,10 +166,10 @@ export default function ProductCard({ product }) {
           <div className="flex sm:hidden items-center gap-1.5">
             <button
               onClick={handleQuickAdd}
-              className="p-2.5 bg-[#1F1914] text-white rounded-xl shadow"
+              className="p-2 bg-[#1F1914] text-white rounded-lg shadow"
               title="Add to Bag"
             >
-              <ShoppingBag className="w-4 h-4" />
+              <ShoppingBag className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>

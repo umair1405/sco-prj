@@ -651,7 +651,7 @@ export default function AdminPortal({ onBackToStore }) {
               </div>
             </div>
 
-            {/* Orders Table */}
+            {/* Orders List / Table */}
             {filteredOrders.length === 0 ? (
               <div className="text-center py-12 border-2 border-dashed border-gray-200 rounded-2xl">
                 <Package className="w-10 h-10 text-gray-300 mx-auto mb-2" />
@@ -659,140 +659,254 @@ export default function AdminPortal({ onBackToStore }) {
                 <p className="text-xs text-gray-400">Orders placed on the storefront will appear here immediately.</p>
               </div>
             ) : (
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs">
-                  <thead>
-                    <tr className="border-b border-[#EADBCE] text-gray-500 uppercase tracking-wider text-[10px]">
-                      <th className="pb-3 font-bold">Order ID &amp; Date</th>
-                      <th className="pb-3 font-bold">Customer Info</th>
-                      <th className="pb-3 font-bold">Items &amp; Details</th>
-                      <th className="pb-3 font-bold">Payment &amp; Total</th>
-                      <th className="pb-3 font-bold">Fulfillment Status</th>
-                      <th className="pb-3 font-bold text-right">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {filteredOrders.map((ord) => {
-                      const isDelivered = ord.status === 'Delivered';
-                      const isShipped = ord.status === 'Shipped';
-                      const isConfirmed = ord.status === 'Confirmed';
+              <div>
+                {/* Mobile Orders Card View (< md) */}
+                <div className="md:hidden space-y-3.5">
+                  {filteredOrders.map((ord) => {
+                    const isDelivered = ord.status === 'Delivered';
+                    const isShipped = ord.status === 'Shipped';
+                    const isConfirmed = ord.status === 'Confirmed';
 
-                      return (
-                        <tr key={ord.orderId} className="hover:bg-[#FAF8F5] transition-colors">
-                          {/* Order ID & Date */}
-                          <td className="py-4 pr-3 align-top">
+                    return (
+                      <div 
+                        key={ord.orderId}
+                        className="bg-[#FAF8F5] border border-[#EADBCE] rounded-2xl p-4 space-y-3 shadow-xs"
+                      >
+                        {/* Card Header: Order ID & Date & Price */}
+                        <div className="flex items-start justify-between gap-2 pb-2 border-b border-gray-200">
+                          <div>
                             <span className="font-mono font-bold text-sm text-[#1F1914] block">
                               {ord.orderId}
                             </span>
-                            <span className="text-[11px] text-gray-400 block mt-0.5">
+                            <span className="text-[10px] text-gray-400">
                               {new Date(ord.date).toLocaleDateString('en-IN', {
                                 day: 'numeric',
                                 month: 'short',
-                                year: 'numeric',
                                 hour: '2-digit',
                                 minute: '2-digit'
                               })}
                             </span>
-                            {ord.coupon && (
-                              <span className="inline-block mt-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded">
-                                Coupon: {ord.coupon}
-                              </span>
-                            )}
-                          </td>
-
-                          {/* Customer Info */}
-                          <td className="py-4 pr-3 align-top">
-                            <span className="font-bold text-[#1F1914] block">
-                              {ord.customer?.name || 'Guest Client'}
-                            </span>
-                            <span className="text-gray-500 block text-[11px]">
-                              {ord.customer?.phone}
-                            </span>
-                            <span className="text-gray-400 block text-[10px] truncate max-w-[180px]">
-                              {ord.address?.city}, {ord.address?.state} ({ord.address?.pincode})
-                            </span>
-                          </td>
-
-                          {/* Items */}
-                          <td className="py-4 pr-3 align-top">
-                            <div className="space-y-1">
-                              {ord.items?.map((it, idx) => (
-                                <div key={idx} className="flex items-center gap-2">
-                                  {it.product?.images?.[0] && (
-                                    <img 
-                                      src={it.product.images[0]} 
-                                      alt="" 
-                                      className="w-7 h-7 rounded object-cover border border-gray-200"
-                                    />
-                                  )}
-                                  <div className="text-[11px] leading-tight">
-                                    <span className="font-semibold text-[#1F1914]">{it.product?.name}</span>
-                                    <span className="text-gray-400 text-[10px] block">
-                                      Size: {it.selectedSize} • Qty: {it.quantity}
-                                    </span>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </td>
-
-                          {/* Payment & Total */}
-                          <td className="py-4 pr-3 align-top">
+                          </div>
+                          <div className="text-right">
                             <span className="font-bold text-sm text-[#1F1914] block">
                               {formatPrice(ord.total)}
                             </span>
-                            <span className="text-[10px] text-gray-500 bg-gray-100 px-2 py-0.5 rounded inline-block mt-1 font-semibold">
+                            <span className="text-[9px] text-gray-500 bg-white px-1.5 py-0.5 rounded border border-gray-200 inline-block font-semibold">
                               {ord.paymentMethod || 'Online'}
                             </span>
-                          </td>
+                          </div>
+                        </div>
 
-                          {/* Status changer */}
-                          <td className="py-4 pr-3 align-top">
-                            <select
-                              value={ord.status}
-                              onChange={(e) => updateOrderStatus(ord.orderId, e.target.value)}
-                              className={`text-[11px] font-bold py-1.5 px-2.5 rounded-lg border focus:outline-none transition-colors ${
-                                isDelivered 
-                                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200' 
-                                  : isShipped 
-                                  ? 'bg-blue-50 text-blue-700 border-blue-200' 
-                                  : isConfirmed 
-                                  ? 'bg-amber-50 text-amber-800 border-amber-200' 
-                                  : 'bg-gray-100 text-gray-700 border-gray-300'
-                              }`}
-                            >
-                              <option value="Confirmed">Confirmed</option>
-                              <option value="Processing">Processing</option>
-                              <option value="Shipped">Shipped</option>
-                              <option value="Delivered">Delivered</option>
-                              <option value="Cancelled">Cancelled</option>
-                            </select>
-                          </td>
+                        {/* Customer & Address */}
+                        <div className="text-xs space-y-0.5">
+                          <span className="font-bold text-[#1F1914] block">
+                            {ord.customer?.name || 'Guest Client'} • <span className="font-normal text-gray-500">{ord.customer?.phone}</span>
+                          </span>
+                          <span className="text-[11px] text-gray-500 block">
+                            {ord.address?.street}, {ord.address?.city} ({ord.address?.pincode})
+                          </span>
+                        </div>
 
-                          {/* Actions */}
-                          <td className="py-4 text-right align-top">
-                            <div className="flex items-center justify-end gap-1.5">
-                              <button
-                                onClick={() => setSelectedOrderDetails(ord)}
-                                className="p-1.5 hover:bg-[#F4EDE2] text-[#8E704F] rounded-lg transition-colors"
-                                title="View Full Invoice"
-                              >
-                                <Eye className="w-4 h-4" />
-                              </button>
-                              <button
-                                onClick={() => deleteOrder(ord.orderId)}
-                                className="p-1.5 hover:bg-rose-50 text-rose-500 rounded-lg transition-colors"
-                                title="Delete Order Record"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </button>
+                        {/* Ordered Items Preview */}
+                        <div className="space-y-1.5 py-1 bg-white/60 p-2.5 rounded-xl border border-gray-100">
+                          {ord.items?.map((it, idx) => (
+                            <div key={idx} className="flex items-center gap-2">
+                              {it.product?.images?.[0] && (
+                                <img 
+                                  src={it.product.images[0]} 
+                                  alt="" 
+                                  className="w-8 h-8 rounded-lg object-cover border border-gray-200 flex-shrink-0"
+                                />
+                              )}
+                              <div className="text-[11px] leading-tight flex-1 min-w-0">
+                                <span className="font-semibold text-[#1F1914] truncate block">{it.product?.name}</span>
+                                <span className="text-gray-500 text-[10px]">
+                                  Size: {it.selectedSize} • Qty: {it.quantity}
+                                </span>
+                              </div>
                             </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
+                          ))}
+                        </div>
+
+                        {/* Status Select & Action Buttons */}
+                        <div className="flex items-center justify-between gap-2 pt-1">
+                          <select
+                            value={ord.status}
+                            onChange={(e) => updateOrderStatus(ord.orderId, e.target.value)}
+                            className={`text-xs font-bold py-1.5 px-2.5 rounded-xl border focus:outline-none flex-1 ${
+                              isDelivered 
+                                ? 'bg-emerald-50 text-emerald-700 border-emerald-200' 
+                                : isShipped 
+                                ? 'bg-blue-50 text-blue-700 border-blue-200' 
+                                : isConfirmed 
+                                ? 'bg-amber-50 text-amber-800 border-amber-200' 
+                                : 'bg-gray-100 text-gray-700 border-gray-300'
+                            }`}
+                          >
+                            <option value="Confirmed">Confirmed</option>
+                            <option value="Processing">Processing</option>
+                            <option value="Shipped">Shipped</option>
+                            <option value="Delivered">Delivered</option>
+                            <option value="Cancelled">Cancelled</option>
+                          </select>
+
+                          <button
+                            onClick={() => setSelectedOrderDetails(ord)}
+                            className="p-2 bg-white hover:bg-[#F4EDE2] text-[#8E704F] rounded-xl border border-[#EADBCE] text-xs font-semibold flex items-center gap-1 shadow-xs"
+                          >
+                            <Eye className="w-3.5 h-3.5" />
+                            <span>Invoice</span>
+                          </button>
+
+                          <button
+                            onClick={() => deleteOrder(ord.orderId)}
+                            className="p-2 bg-white hover:bg-rose-50 text-rose-500 rounded-xl border border-rose-200 shadow-xs"
+                            title="Delete"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Desktop Orders Table (>= md) */}
+                <div className="hidden md:block overflow-x-auto">
+                  <table className="w-full text-left text-xs">
+                    <thead>
+                      <tr className="border-b border-[#EADBCE] text-gray-500 uppercase tracking-wider text-[10px]">
+                        <th className="pb-3 font-bold">Order ID &amp; Date</th>
+                        <th className="pb-3 font-bold">Customer Info</th>
+                        <th className="pb-3 font-bold">Items &amp; Details</th>
+                        <th className="pb-3 font-bold">Payment &amp; Total</th>
+                        <th className="pb-3 font-bold">Fulfillment Status</th>
+                        <th className="pb-3 font-bold text-right">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      {filteredOrders.map((ord) => {
+                        const isDelivered = ord.status === 'Delivered';
+                        const isShipped = ord.status === 'Shipped';
+                        const isConfirmed = ord.status === 'Confirmed';
+
+                        return (
+                          <tr key={ord.orderId} className="hover:bg-[#FAF8F5] transition-colors">
+                            {/* Order ID & Date */}
+                            <td className="py-4 pr-3 align-top">
+                              <span className="font-mono font-bold text-sm text-[#1F1914] block">
+                                {ord.orderId}
+                              </span>
+                              <span className="text-[11px] text-gray-400 block mt-0.5">
+                                {new Date(ord.date).toLocaleDateString('en-IN', {
+                                  day: 'numeric',
+                                  month: 'short',
+                                  year: 'numeric',
+                                  hour: '2-digit',
+                                  minute: '2-digit'
+                                })}
+                              </span>
+                              {ord.coupon && (
+                                <span className="inline-block mt-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded">
+                                  Coupon: {ord.coupon}
+                                </span>
+                              )}
+                            </td>
+
+                            {/* Customer Info */}
+                            <td className="py-4 pr-3 align-top">
+                              <span className="font-bold text-[#1F1914] block">
+                                {ord.customer?.name || 'Guest Client'}
+                              </span>
+                              <span className="text-gray-500 block text-[11px]">
+                                {ord.customer?.phone}
+                              </span>
+                              <span className="text-gray-400 block text-[10px] truncate max-w-[180px]">
+                                {ord.address?.city}, {ord.address?.state} ({ord.address?.pincode})
+                              </span>
+                            </td>
+
+                            {/* Items */}
+                            <td className="py-4 pr-3 align-top">
+                              <div className="space-y-1">
+                                {ord.items?.map((it, idx) => (
+                                  <div key={idx} className="flex items-center gap-2">
+                                    {it.product?.images?.[0] && (
+                                      <img 
+                                        src={it.product.images[0]} 
+                                        alt="" 
+                                        className="w-7 h-7 rounded object-cover border border-gray-200"
+                                      />
+                                    )}
+                                    <div className="text-[11px] leading-tight">
+                                      <span className="font-semibold text-[#1F1914]">{it.product?.name}</span>
+                                      <span className="text-gray-400 text-[10px] block">
+                                        Size: {it.selectedSize} • Qty: {it.quantity}
+                                      </span>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </td>
+
+                            {/* Payment & Total */}
+                            <td className="py-4 pr-3 align-top">
+                              <span className="font-bold text-sm text-[#1F1914] block">
+                                {formatPrice(ord.total)}
+                              </span>
+                              <span className="text-[10px] text-gray-500 bg-gray-100 px-2 py-0.5 rounded inline-block mt-1 font-semibold">
+                                {ord.paymentMethod || 'Online'}
+                              </span>
+                            </td>
+
+                            {/* Status changer */}
+                            <td className="py-4 pr-3 align-top">
+                              <select
+                                value={ord.status}
+                                onChange={(e) => updateOrderStatus(ord.orderId, e.target.value)}
+                                className={`text-[11px] font-bold py-1.5 px-2.5 rounded-lg border focus:outline-none transition-colors ${
+                                  isDelivered 
+                                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200' 
+                                    : isShipped 
+                                    ? 'bg-blue-50 text-blue-700 border-blue-200' 
+                                    : isConfirmed 
+                                    ? 'bg-amber-50 text-amber-800 border-amber-200' 
+                                    : 'bg-gray-100 text-gray-700 border-gray-300'
+                                }`}
+                              >
+                                <option value="Confirmed">Confirmed</option>
+                                <option value="Processing">Processing</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="Cancelled">Cancelled</option>
+                              </select>
+                            </td>
+
+                            {/* Actions */}
+                            <td className="py-4 text-right align-top">
+                              <div className="flex items-center justify-end gap-1.5">
+                                <button
+                                  onClick={() => setSelectedOrderDetails(ord)}
+                                  className="p-1.5 hover:bg-[#F4EDE2] text-[#8E704F] rounded-lg transition-colors"
+                                  title="View Full Invoice"
+                                >
+                                  <Eye className="w-4 h-4" />
+                                </button>
+                                <button
+                                  onClick={() => deleteOrder(ord.orderId)}
+                                  className="p-1.5 hover:bg-rose-50 text-rose-500 rounded-lg transition-colors"
+                                  title="Delete Order Record"
+                                >
+                                  <Trash2 className="w-4 h-4" />
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             )}
           </div>
