@@ -156,20 +156,20 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif-luxury font-bold text-[#1F1914] leading-[1.18] tracking-tight">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-serif-luxury font-bold text-[#1F1914] leading-[1.2] tracking-tight break-words">
               Elegance Tailored for the <span className="italic font-normal gold-text-gradient block sm:inline">Modern Woman</span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-sm sm:text-lg text-[#5A483B] max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-xs sm:text-base text-[#5A483B] max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
               Explore exquisite silk satin co-ords, royal embroidered abayas, and flowy designer silhouettes. Handcrafted for unforgettable moments.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <div className="flex items-center justify-center lg:justify-start gap-3 pt-2">
               <button 
                 onClick={handleExplore}
-                className="w-full sm:w-auto px-7 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-bold tracking-wider uppercase rounded-full btn-luxury flex items-center justify-center gap-2.5 group shadow-lg"
+                className="w-full sm:w-auto px-6 sm:px-9 py-3 sm:py-3.5 text-xs sm:text-sm font-bold tracking-wider uppercase rounded-full btn-luxury flex items-center justify-center gap-2 group shadow-md"
               >
                 <span>Explore Collection</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -177,18 +177,18 @@ export default function Hero() {
             </div>
 
             {/* Trust highlights */}
-            <div className="grid grid-cols-3 gap-2 pt-6 border-t border-[#DFCBB5]/70 max-w-lg mx-auto lg:mx-0">
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-2 pt-4 sm:pt-6 border-t border-[#DFCBB5]/70 max-w-lg mx-auto lg:mx-0">
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <span className="text-xl sm:text-2xl font-serif-luxury font-bold text-[#1F1914]">100%</span>
-                <span className="text-[11px] text-[#6B5E55] font-medium leading-tight">Premium Silk &amp; Velvet</span>
+                <span className="text-base sm:text-xl lg:text-2xl font-serif-luxury font-bold text-[#1F1914]">100%</span>
+                <span className="text-[10px] sm:text-[11px] text-[#6B5E55] font-medium leading-tight">Premium Fabrics</span>
               </div>
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <span className="text-xl sm:text-2xl font-serif-luxury font-bold text-[#1F1914]">24-48h</span>
-                <span className="text-[11px] text-[#6B5E55] font-medium leading-tight">Express Dispatch</span>
+                <span className="text-base sm:text-xl lg:text-2xl font-serif-luxury font-bold text-[#1F1914]">24-48h</span>
+                <span className="text-[10px] sm:text-[11px] text-[#6B5E55] font-medium leading-tight">Express Dispatch</span>
               </div>
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <span className="text-xl sm:text-2xl font-serif-luxury font-bold text-[#1F1914]">5,000+</span>
-                <span className="text-[11px] text-[#6B5E55] font-medium leading-tight">Happy Instagram DMs</span>
+                <span className="text-base sm:text-xl lg:text-2xl font-serif-luxury font-bold text-[#1F1914]">5,000+</span>
+                <span className="text-[10px] sm:text-[11px] text-[#6B5E55] font-medium leading-tight">Happy Clients</span>
               </div>
             </div>
 

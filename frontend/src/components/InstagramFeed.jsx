@@ -36,20 +36,20 @@ export default function InstagramFeed() {
   ];
 
   return (
-    <section className="py-16 bg-[#FAF8F5] border-t border-b border-[#EADBCE]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 bg-[#FAF8F5] border-t border-b border-[#EADBCE] w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-3 sm:gap-4">
           <div>
-            <div className="flex items-center gap-2 text-[#8E704F] text-xs font-bold tracking-[0.25em] uppercase mb-1">
-              <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+            <div className="flex items-center gap-1.5 text-[#8E704F] text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-1">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4AF37]" />
               <span>Exclusive Boutique Edits</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-serif-luxury font-bold text-[#1F1914]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif-luxury font-bold text-[#1F1914] break-words">
               Signature Lookbook &amp; New Arrivals
             </h2>
-            <p className="text-xs sm:text-sm text-[#6B5E55] mt-1">
+            <p className="text-[11px] sm:text-sm text-[#6B5E55] mt-1">
               Explore handcrafted co-ords, luxury abayas, one-piece gowns &amp; denim with live rates and 1-click ordering
             </p>
           </div>
@@ -59,9 +59,9 @@ export default function InstagramFeed() {
               const el = document.getElementById('collection-section');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase bg-white border border-[#DFCBB5] text-[#1F1914] hover:bg-[#1F1914] hover:text-white transition-all shadow-sm flex-shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase bg-white border border-[#DFCBB5] text-[#1F1914] hover:bg-[#1F1914] hover:text-white transition-all shadow-xs flex-shrink-0 w-full sm:w-auto"
           >
-            <ShoppingBag className="w-4 h-4 text-[#8E704F]" />
+            <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8E704F]" />
             <span>Explore All Designs</span>
           </button>
         </div>
