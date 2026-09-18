@@ -52,20 +52,20 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-300">
       {/* Top Luxury Announcement Bar */}
-      <div className="bg-[#1B1510] text-[#E8D9C5] text-xs py-2 px-4 text-center font-medium tracking-wider flex items-center justify-between border-b border-[#382C22]">
+      <div className="bg-[#1B1510] text-[#E8D9C5] text-[10px] sm:text-xs py-1.5 sm:py-2 px-2 sm:px-4 text-center font-medium tracking-normal sm:tracking-wider flex items-center justify-between border-b border-[#382C22] overflow-hidden">
         <div className="hidden md:flex items-center space-x-4 text-[11px] opacity-80">
           <span className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
             Worldwide Shipping Available
           </span>
           <span>•</span>
-          <span>Kozhikode, Kerala & Global Boutique</span>
+          <span>Kozhikode, Kerala &amp; Global Boutique</span>
         </div>
 
-        <div className="mx-auto flex items-center justify-center gap-2">
-          <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-          <span>USE CODE <strong className="text-white underline font-bold tracking-widest">SENORA10</strong> FOR 10% OFF YOUR FIRST DROP</span>
-          <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+        <div className="mx-auto flex items-center justify-center gap-1.5 sm:gap-2 truncate">
+          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37] flex-shrink-0" />
+          <span className="truncate">USE CODE <strong className="text-white underline font-bold tracking-wider">SENORA10</strong> FOR 10% OFF</span>
+          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37] flex-shrink-0" />
         </div>
 
         <div className="hidden md:flex items-center space-x-3 text-[11px]">
@@ -112,33 +112,33 @@ export default function Navbar() {
           ? 'glass-panel shadow-sm border-[#EADBCE]' 
           : 'bg-[#FAF8F5]/95 backdrop-blur-md border-[#EADBCE]/60'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             
             {/* Mobile Menu Trigger & Search Icon */}
-            <div className="flex items-center gap-3 lg:hidden">
+            <div className="flex items-center gap-1 sm:gap-3 lg:hidden">
               <button 
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 text-[#2A1F17] hover:bg-[#F1E9DC] rounded-full transition-colors"
+                className="p-1.5 sm:p-2 text-[#2A1F17] hover:bg-[#F1E9DC] rounded-full transition-colors"
                 aria-label="Open navigation menu"
               >
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
               <button 
                 onClick={() => setSearchOpen(!searchOpen)}
-                className="p-2 text-[#2A1F17] hover:bg-[#F1E9DC] rounded-full transition-colors"
+                className="p-1.5 sm:p-2 text-[#2A1F17] hover:bg-[#F1E9DC] rounded-full transition-colors"
                 aria-label="Toggle search"
               >
-                <Search className="w-5 h-5" />
+                <Search className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 
             {/* Brand Logo */}
-            <div className="flex flex-col items-center justify-center cursor-pointer" onClick={() => { setActiveCategory('all'); window.scrollTo({ top: 0, behavior: 'smooth'}); }}>
-              <div className="text-2xl sm:text-3xl font-serif-luxury font-bold tracking-[0.25em] text-[#1F1914] uppercase">
+            <div className="flex flex-col items-center justify-center cursor-pointer px-1" onClick={() => { setActiveCategory('all'); window.scrollTo({ top: 0, behavior: 'smooth'}); }}>
+              <div className="text-lg sm:text-2xl md:text-3xl font-serif-luxury font-bold tracking-[0.15em] sm:tracking-[0.25em] text-[#1F1914] uppercase text-center whitespace-nowrap">
                 SENORA &amp; CO
               </div>
-              <span className="text-[9px] uppercase tracking-[0.35em] text-[#8E704F] font-semibold -mt-0.5">
+              <span className="text-[7px] sm:text-[9px] uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#8E704F] font-semibold -mt-0.5 whitespace-nowrap">
                 Couture • Ready-to-Wear
               </span>
             </div>

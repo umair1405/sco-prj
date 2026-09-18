@@ -99,7 +99,7 @@ export default function InstagramFeed() {
         </div>
 
         {/* Lookbook Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {displayedLooks.map((product) => (
             <div
               key={product.id}
@@ -116,15 +116,15 @@ export default function InstagramFeed() {
                 />
 
                 {/* Top Brand Tag Pill */}
-                <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 z-10 shadow">
-                  <Sparkles className="w-3 h-3 text-[#D4AF37]" />
+                <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-black/60 backdrop-blur-md text-white px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] font-semibold flex items-center gap-1 sm:gap-1.5 z-10 shadow">
+                  <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#D4AF37]" />
                   <span>Senora Edit</span>
                 </div>
 
                 {/* Multiple Images Indicator Badge */}
                 {product.images.length > 1 && (
-                  <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 shadow">
-                    +{product.images.length} Photos
+                  <div className="absolute top-2 sm:top-3 right-2 sm:right-3 bg-black/60 backdrop-blur-md text-white text-[9px] sm:text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded-full z-10 shadow">
+                    +{product.images.length}
                   </div>
                 )}
 
@@ -135,31 +135,31 @@ export default function InstagramFeed() {
                       e.stopPropagation();
                       setSelectedProductModal(product);
                     }}
-                    className="px-4 py-2.5 bg-white text-[#1F1914] text-xs font-bold rounded-xl shadow-lg flex items-center gap-1.5 hover:bg-[#FAF8F5] transition-colors"
+                    className="px-3 sm:px-4 py-2 sm:py-2.5 bg-white text-[#1F1914] text-xs font-bold rounded-xl shadow-lg flex items-center gap-1.5 hover:bg-[#FAF8F5] transition-colors"
                   >
-                    <Eye className="w-4 h-4" />
+                    <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     <span>View Look</span>
                   </button>
                 </div>
               </div>
 
               {/* Product Info & Rate Section */}
-              <div className="p-4 flex flex-col justify-between flex-1 space-y-3">
+              <div className="p-3 sm:p-4 flex flex-col justify-between flex-1 space-y-2.5 sm:space-y-3">
                 <div>
-                  <div className="flex items-center justify-between text-[11px] mb-1">
+                  <div className="flex items-center justify-between text-[10px] sm:text-[11px] mb-1">
                     <span className="font-bold text-[#8E704F] uppercase tracking-wider">
                       {product.category}
                     </span>
-                    <span className="text-[10px] bg-[#FAF8F5] border border-[#DFCBB5] text-gray-600 px-2 py-0.5 rounded font-semibold">
-                      Sizes: {product.sizes.slice(0, 3).join(', ')}
+                    <span className="text-[9px] sm:text-[10px] bg-[#FAF8F5] border border-[#DFCBB5] text-gray-600 px-1.5 sm:px-2 py-0.5 rounded font-semibold truncate max-w-[80px]">
+                      {product.sizes.slice(0, 2).join(', ')}
                     </span>
                   </div>
 
-                  <h3 className="font-serif-luxury font-bold text-sm text-[#1F1914] group-hover:text-[#8E704F] transition-colors line-clamp-1">
+                  <h3 className="font-serif-luxury font-bold text-xs sm:text-sm text-[#1F1914] group-hover:text-[#8E704F] transition-colors line-clamp-1">
                     {product.name}
                   </h3>
 
-                  <p className="text-xs text-[#6B5E55] line-clamp-2 mt-1 leading-relaxed">
+                  <p className="text-[11px] sm:text-xs text-[#6B5E55] line-clamp-1 sm:line-clamp-2 mt-0.5 leading-relaxed">
                     {product.shortDesc || product.description}
                   </p>
                 </div>
@@ -167,13 +167,13 @@ export default function InstagramFeed() {
                 {/* Rate & Buy Actions */}
                 <div className="pt-2 border-t border-gray-100 flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] uppercase text-gray-400 font-semibold block">Rate</span>
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="text-base font-bold text-[#1F1914]">
+                    <span className="text-[9px] sm:text-[10px] uppercase text-gray-400 font-semibold block">Rate</span>
+                    <div className="flex items-baseline gap-1 sm:gap-1.5">
+                      <span className="text-sm sm:text-base font-bold text-[#1F1914]">
                         {formatPrice(product.price)}
                       </span>
                       {product.originalPrice > product.price && (
-                        <span className="text-xs text-gray-400 line-through">
+                        <span className="text-[10px] sm:text-xs text-gray-400 line-through">
                           {formatPrice(product.originalPrice)}
                         </span>
                       )}
@@ -185,13 +185,12 @@ export default function InstagramFeed() {
                       e.stopPropagation();
                       setSelectedProductModal(product);
                     }}
-                    className="px-3.5 py-1.5 rounded-lg btn-luxury text-[11px] font-bold flex items-center gap-1.5 shadow-sm"
+                    className="p-1.5 sm:p-2 bg-[#1F1914] hover:bg-[#8E704F] text-white rounded-lg sm:rounded-xl shadow transition-colors flex items-center gap-1 text-[10px] sm:text-xs font-semibold"
                   >
-                    <Eye className="w-3.5 h-3.5" />
-                    <span>View</span>
+                    <ShoppingBag className="w-3.5 h-3.5" />
+                    <span className="hidden xs:inline">Order</span>
                   </button>
                 </div>
-
               </div>
             </div>
           ))}
